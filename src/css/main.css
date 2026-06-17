@@ -9,11 +9,11 @@ body {
 }
 @font-face {
   font-family: Yekan;
-  src: url(../fonts/iranyekanwebmedium.woff);
+  src: url(../../fonts/iranyekanwebmedium.woff);
 }
 @font-face {
   font-family: Nazanin;
-  src: url(../fonts/Far_Nazanin.ttf);
+  src: url(../../fonts/Far_Nazanin.ttf);
 }
 :root {
   --font-family: Yekan;
@@ -1051,7 +1051,7 @@ body {
     max-width: 1336px;
     height: 100%;
     margin: 0 auto;
-    background-image: url(../images/super-wonderfull/background-1.svg);
+    background-image: url(../../images/super-wonderfull/background-1.svg);
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: var(--large-radius);
