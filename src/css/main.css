@@ -15,10 +15,14 @@ body {
   font-family: Nazanin;
   src: url(../../fonts/Far_Nazanin.ttf);
 }
+@font-face {
+  font-family: Sans-serif;
+  src: url(../../fonts/DM-Sans-regular.woff2);
+}
 :root {
   --font-family: Yekan;
   --font-family-1: Nazanin;
-  --font-family-2: Kamran;
+  --font-family-2: Sans-serif;
   --color-menu: #62666d;
   --color-white: #fff;
   --color-primary-500: #ef4056;
@@ -1047,6 +1051,7 @@ body {
 .super-wonderfull {
   width: 100%;
   height: 110px;
+  margin-bottom: 15px;
   .s-w-c {
     max-width: 1336px;
     height: 100%;
@@ -1062,8 +1067,9 @@ body {
       text-align: center;
       .super-wrapper {
         height: 100%;
+        margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between !important;
         align-items: center;
         padding-left: 40px;
         padding-right: 40px;
@@ -1098,24 +1104,97 @@ body {
             }
           }
           .right-left {
-            width: 84px;
+            width: fit-content;
             height: 28px;
-            margin: 0 auto;
+            margin: 0 auto !important;
             background-color: var(--color-fresh-700);
             border-radius: 9999px;
             padding: 0 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: 2px;
-            font-size: 14px;
-            font-family: var(--font-family);
-            color: var(--color-white);
+            white-space: nowrap;
+            text-align: center;
             p {
               font-size: 16px;
               font-weight: 700;
               font-family: var(--font-family-1);
               color: var(--color-white);
+              line-height: 28px;
+            }
+          }
+        }
+        .left{
+          height: 74px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          .left-right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .div-relative{
+              position: relative;
+              padding: 8px;
+              background-color: #ffffff;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-left: 8px;
+              .abs-image{
+                width: 58px;
+                height: 58px;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                }
+              }
+              .abs-text{
+                width: 34px;
+                height: 20px;
+                position: absolute;
+                background-color: #d32f2f;
+                border-radius: var(--large-radius);
+                bottom: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                  font-family: var(--font-family-1);
+                  font-size: 14px;
+                  color: #ffffff;
+                  font-weight: 700;
+                  line-height: 2.17;
+                }
+              }
+            }
+          }
+          .left-left{
+            background-color: #ffffff;
+            border-radius: 9999px;
+            padding: 12px 20px 12px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span{
+              font-family: var(--font-family-1);
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 2.17;
+              cursor: pointer;
+              white-space: nowrap;
+              color: var(--color-fresh-700);
+            }
+            div{
+              margin-right: 8px;
+              display: flex;
+              justify-content: center;
+              img{
+                width: 18px;
+                height: 18px;
+              }
             }
           }
         }
