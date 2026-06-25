@@ -1556,9 +1556,32 @@ body {
     border-radius: var(--large-radius);
     border: 1px solid var(--color-neutral-200);
     margin: 0 auto;
+    padding: 20px 10px;
+    .selected-products-header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      column-gap: 8px;
+      img{
+        width: 24px;
+        height: 24px;
+      }
+      p{
+        font-family: var(--font-family);
+        font-size: 21px;
+        text-align: center;
+      }
+    }
   }
 }
 /***********************************selected products************************************/
+
+
+
+
+
+
 
 /***********************************fixed-elements************************************/
 .fixed-supermarket {
@@ -1656,15 +1679,12 @@ body {
     visibility: visible;
   }
 }
-
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #C0C2C5;
 }
-
 ::-webkit-scrollbar-track {
   background: #eee;
 }
