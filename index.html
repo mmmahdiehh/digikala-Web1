@@ -16,6 +16,7 @@
 <body>
   <!-- start project -->
     <div class="body-overlay"></div>
+    <div class="overlay"></div>
     <div class="wrapper">
         <!-- header -->
         <div class="header">
@@ -5924,22 +5925,20 @@
     <!-- leaflet (map) -->
      <!-- overlay -->
       <script>
-        const overlay = document.getElementById("overlay");
+        document.addEventListener("DOMContentLoaded", () => {
 
-        function openSelectLocation() {
-        document.querySelector(".select-location").classList.add("active");
-        overlay.classList.add("active");
-        }
+            const overlay = document.querySelector(".overlay");
+            const supermarket = document.getElementById("fixed-supermarket");
 
-        function openSupermarket() {
-        document.querySelector(".supermarket-popup").classList.add("active");
-        overlay.classList.add("active");
-        }
-        function closeAllPopups() {
-        document.querySelector(".select-location").classList.remove("active");
-        document.querySelector(".supermarket-popup").classList.remove("active");
-        overlay.classList.remove("active");
-        }
+            function updateOverlay() {
+                overlay.classList.toggle(
+                    "active",
+                    location.checked || supermarket.checked
+                );
+            }
+
+            setInterval(updateOverlay, 20);
+        });
       </script>
      <!-- overlay -->
       <!-- more -->
