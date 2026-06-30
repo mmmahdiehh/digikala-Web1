@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>فروشگاه اینترنتی دیجی کالا</title>
-  <link rel="stylesheet" href="./src/css/main.css">
-  <link rel="shortcut icon" href="./images/icon/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/main.css"/>
+  <link rel="shortcut icon" href="./images/icon/icon.png" type="image/x-icon"/>
   <meta name="keywords" content="mobile,laptop,...."/>
   <meta name="description" content="lorem"/>
   <meta name="robots" content="follow,index"/>
-  <link rel="stylesheet" href="./FontAwesome.Pro.7.2.0/css/all.css">
-  <link rel="stylesheet" href="./src/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./FontAwesome.Pro.7.2.0/css/all.css"/>
+  <link rel="stylesheet" href="./src/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </head>
 <body>
   <!-- start project -->
@@ -2868,7 +2869,7 @@
                         <div class="hbc-right-third"></div>
                         <div class="hbc-right-forth"></div>
                     </nav>
-                    <div class="hbc-left">
+                    <label for="location">
                         <div>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 10.2C18 6.57 15.35 4 12 4C8.65 4 6 6.57 6 10.2C6 12.54 7.95 15.64 12 19.34C16.05 15.64 18 12.54 18 10.2ZM12 2C16.2 2 20 5.22 20 10.2C20 13.52 17.33 17.45 12 22C6.67 17.45 4 13.52 4 10.2C4 5.22 7.8 2 12 2Z" fill="#F57f17"/>
@@ -2878,6 +2879,75 @@
                         <p>
                             انتخاب آدرس
                         </p>
+                    </label>
+                    <input type="radio" name="location" id="location"/>
+                    <input type="radio" name="location" id="close-location">
+                    <div class="select-location">
+                        <div class="select-location-center">
+                            <div class="select-location-center-header">
+                                <div class="select-location-c-h-c">
+                                    <div class="select-location-c-h-c-c">
+                                        <div class="select-location-c-h-c-c-top">
+                                            <div class="select-location-c-h-c-c-top-right">
+                                                انتخاب موقعیت مکانی
+                                            </div>
+                                            <label for="close-location">
+                                                <div class="cross-icon">
+                                                    <img src="./images/fixed/cross.svg" alt="">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="select-location-c-h-c-c-bottom">
+                                            برای تحویل به‌موقع سفارش، موقعیت را دقیق انتخاب کنید.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select-location-center-body">
+                                <div class="select-location-c-b-c">
+                                    <div class="select-location-c-b-c-map">
+                                        <div class="select-location-c-b-c-map-map">
+                                            <div class="map-items" id="map"></div>
+                                            <div class="map-pin">
+                                                <div class="map-label">
+                                                    موقعیت تحویل سفارش
+                                                </div>
+                                                <img src="images/overlay/location/pin.svg" alt="pin">
+                                            </div>
+                                        </div>
+                                        <div class="select-location-c-b-c-map-search">
+                                            <div class="map-search-ite">
+                                                <div class="map-search-it">
+                                                    <div class="map-search-i">
+                                                        <img class="icon-search" src="./images/header/icons/magnifying-glass.svg" alt="">
+                                                    </div>
+                                                    <span class="map-search-box">
+                                                        <label class="FromComponentFrame">
+                                                            <div class="data-map-search">
+                                                                <div class="data-map-search-grow">
+                                                                    <input type="text" name="search-input" placeholder="جستجوی استان و شهر ..." autocomplete="off">
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select-location-center-footer">
+                                <div class="select-location-c-f-c">
+                                    <button>
+                                        <div>
+                                            <span>
+                                                ثبت موقعیت مکانی
+                                            </span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3064,13 +3134,237 @@
                     <a href="#"><img src="./images/category/image-9.webp" alt=""/></a>
                     <a href="#"><p>فروشنده شوید</p></a>
                 </div>
-                <div class="category-item">
+                <div class="category-item" id="more">
                     <div class="category-more">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
                     <a href="#"><p>بیشتر</p></a>
+                </div>
+            </div>
+            <div class="modal-service">
+                <div class="modal">
+                    <div class="modal-body">
+                    <div class="modal-header">
+                        <p>خدمات دیجی کالا</p>
+                        <span class="close">&times;</span>
+                    </div>  
+                    <div class="modal-top">
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-1.webp" alt="">
+                            <span>سوپرمارکت فوری</span>
+                        </a>
+
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-2.webp" alt="">
+                            <span>استایل مو</span>
+                        </a>
+
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-3.webp" alt="">
+                            <span>گل تخفیف کالای دیجیتال</span>
+                        </a>
+
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-4.webp" alt="">
+                            <span>لگو 2026</span>
+                        </a>
+
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-5.webp" alt="">
+                            <span>شبکه‌های اجتماعی</span>
+                        </a>
+
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-6.webp" alt="">
+                            <span>دیجی کالا سرویس</span>
+                        </a>
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-7.webp" alt="">
+                            <span>دیجی کالا سرویس</span>
+                        </a>
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-8.webp" alt="">
+                            <span>دیجی کالا سرویس</span>
+                        </a>
+                        <a href="#" class="modal-item">
+                            <img src="./images/category/more/image-9.webp" alt="">
+                            <span>دیجی کالا سرویس</span>
+                        </a>                                                
+
+                    </div>
+
+                    <h3>سرویس‌های گروه دیجی‌کالا</h3>
+
+                    <div class="services">
+
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-10.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>طلا و نقره دیجیتال</h4>
+
+                                <p>خرید و فروش آنلاین طلا</p>
+
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-11.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>اشتراک پلاس</h4>
+
+                                <p>ارسال رایگان و مزایای ویژه</p>
+
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا سرویس</h4>
+
+                                <p>نصب و تعمیر در محل</p>
+
+                            </div>
+
+                        </a>
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-13.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>محصولات رژیمی</h4>
+
+                            </div>
+
+                        </a>
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-14.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی‌کالا مهر</h4>
+
+                                <p>همه چیز برای این روزا</p>
+
+                            </div>
+
+                        </a>                                
+
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا بیزینس</h4>
+
+                                <p>خرید عمده کالا</p>
+
+                            </div>
+
+                        </a>
+
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا بیزینس</h4>
+
+                                <p>خرید عمده کالا</p>
+
+                            </div>
+
+                        </a>
+                        
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا بیزینس</h4>
+
+                                <p>خرید عمده کالا</p>
+
+                            </div>
+
+                        </a>
+                        
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا بیزینس</h4>
+
+                                <p>خرید عمده کالا</p>
+
+                            </div>
+
+                        </a>
+                        
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا بیزینس</h4>
+
+                                <p>خرید عمده کالا</p>
+
+                            </div>
+
+                        </a>
+                        
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا بیزینس</h4>
+
+                                <p>خرید عمده کالا</p>
+
+                            </div>
+
+                        </a>
+                        
+                        <a href="#" class="service-box">
+
+                            <img src="./images/category/more/image-12.webp" alt="">
+
+                            <div class="service-text">
+
+                                <h4>دیجی کالا بیزینس</h4>
+
+                                <p>خرید عمده کالا</p>
+
+                            </div>
+
+                        </a>                
+                    </div>
+                    </div>  
+
                 </div>
             </div>
         </div>
@@ -5271,15 +5565,82 @@
                 </div>
             </div>
          </div>
-        <!-- end footer -->ج
+        <!-- end footer -->
         <!-- fixed elements -->
-        <div class="fixed-supermarket">
+        <label for="fixed-supermarket" class="fixed-supermarket">
             <div class="fixed-supermarket-text">
                 سوپرمارکت
             </div>
             <div class="fixed-supermarket-image">
                 <img src="./images/header/icons/basket-white.svg" alt=""">
             </div>
+        </label>
+        <div class="overlay"></div>
+        <input type="radio" name="fixed-supermarket" id="fixed-supermarket" />
+        <input type="radio" name="fixed-supermarket" id="close-fixed-supermarket">
+        <div class="supermarket-popup">
+                <div class="supermarket-popup-center">
+                    <div class="supermarket-popup-center-header">
+                        <div class="supermarket-popup-c-h-c">
+                            <div class="supermarket-popup-c-h-c-c">
+                                <div class="supermarket-popup-c-h-c-c-top">
+                                    <div class="supermarket-popup-c-h-c-c-top-right">
+                                        یکی از سوپرمارکت‌های زیر را انتخاب کنید
+                                    </div>
+                                    <label for="close-fixed-supermarket">
+                                        <div class="cross-icon">
+                                            <img src="./images/fixed/cross.svg" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="supermarket-popup-center-body">
+                        <div class="supermarket-popup-c-b-c">
+                            <div>
+                                <div class="right">
+                                    <div class="right-top">
+                                        <div class="right-top-text">پرتخفیف و متنوع</div>
+                                        <div class="right-top-icon">
+                                            <img src="./images/overlay/supermarket/arrow-left.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="right-center">
+                                        <div class="right-center-center">
+                                            <div>
+                                                <img src="./images/overlay/supermarket/trunk.svg" alt="">
+                                            </div>
+                                            <p>ارسال سریع</p>
+                                        </div>
+                                    </div>
+                                    <div class="right-bottom">
+                                        <img src="./images/overlay/supermarket/image-1.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="left">
+                                    <div class="left-top">
+                                        <div class="left-top-text">ارسال فوری</div>
+                                        <div class="left-top-icon">
+                                            <img src="./images/overlay/supermarket/arrow-left.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="left-center">
+                                        <div class="left-center-center">
+                                            <div>
+                                                <img src="./images/overlay/supermarket/clock.svg" alt="">
+                                            </div>
+                                            <p>45 دقیقه ای</p>
+                                        </div>
+                                    </div>
+                                    <div class="left-bottom">
+                                        <img src="./images/overlay/supermarket/image-2.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
         <div class="fixed-support">
             <div class="fixed-support-image">
@@ -5521,6 +5882,87 @@
         });
      </script>
     <!-- footer more button -->
-     
+    <!-- leaflet (map) -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        let map = null;
+
+        function initMap() {
+
+            if (!map) {
+
+                map = L.map("map").setView([35.6892, 51.3890], 13);
+
+                L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                    attribution: "&copy; OpenStreetMap contributors"
+                }).addTo(map);
+
+                map.on("moveend", function () {
+                    const center = map.getCenter();
+                    console.log(center.lat);
+                    console.log(center.lng);
+                });
+
+            }
+
+            setTimeout(function () {
+                map.invalidateSize();
+            }, 300);
+
+        }
+
+        const locationInput = document.getElementById("location");
+
+        locationInput.addEventListener("change", function () {
+
+            if (this.checked) {
+                initMap();
+            }
+
+        });
+    </script>
+    <!-- leaflet (map) -->
+     <!-- overlay -->
+      <script>
+        const overlay = document.getElementById("overlay");
+
+        function openSelectLocation() {
+        document.querySelector(".select-location").classList.add("active");
+        overlay.classList.add("active");
+        }
+
+        function openSupermarket() {
+        document.querySelector(".supermarket-popup").classList.add("active");
+        overlay.classList.add("active");
+        }
+        function closeAllPopups() {
+        document.querySelector(".select-location").classList.remove("active");
+        document.querySelector(".supermarket-popup").classList.remove("active");
+        overlay.classList.remove("active");
+        }
+      </script>
+     <!-- overlay -->
+      <!-- more -->
+       <script>
+        const more = document.getElementById("more");
+        const modal = document.querySelector(".modal-service");
+        const closeBtn = document.querySelector(".close");
+
+        more.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.classList.add("active");
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("active");
+            }
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+    </script>
+    <!-- more -->
 </body>
 </html>
