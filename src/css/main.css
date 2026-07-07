@@ -2942,6 +2942,10 @@ input[type="radio"] {
 }
 /***********************************end main page************************************/
 /***********************************start supermarket************************************/
+.supermarket-wrapper{
+  width: 100%;
+  height: 100%;
+}
 .supermarket-header {
   width: 100%;
   height: 110px;
